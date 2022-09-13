@@ -1,0 +1,34 @@
+<h1> Edit flat </h1>
+
+<%= form_with model:@flat do |f| %>
+    <div>
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+    </div>
+
+    <div>
+        <%= f.label :address %>
+        <%= f.text_field :address %>
+    </div>
+
+    <div>
+        <%= f.label :description %>
+        <%= f.text_area :description %>
+    </div>
+
+    <div>
+        <%= f.label :price_per_night %>
+        <%= f.number_field :price_per_night %>
+    </div>
+
+    <div>
+        <%= f.label :number_of_guests %>
+        <%= f.number_field :number_of_guests %>
+    </div>
+
+    <div>
+    <%= f.submit %>
+    </div>
+<% end %>
+
+<%= link_to 'Back', flats_path %>
